@@ -1,0 +1,48 @@
+$main-color: #0a0e14;
+
+.page_header{
+    .page_header_wrapper{
+        display: flex;
+        justify-content: space-between;
+        padding-right: 50px;
+        padding-left: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        .username{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:hover .username_link{
+                text-decoration: underline;
+            }
+            .username_link{
+                text-decoration: none;
+                font-size: 18px;
+                color: white;
+                font-family: 'Montserrat';
+            }
+        }
+        .links_list{
+            display: flex;
+            gap: 10px;
+            li{
+                .header_link{
+                    display: block;
+                    padding: 5px;
+                    background-color: lighten($main-color, 20%);
+                    color: lighten($main-color, 60%);
+                    text-decoration: none;
+                    border-radius: 20px;
+                    font-family: 'Montserrat';
+                    box-shadow: 0 0 9px 4px lighten($main-color, 20%);
+                    transition: 0.5s all;
+                    &:hover{
+                        background-color: lighten($main-color, 50%);
+                        box-shadow: 0 0 9px 4px lighten($main-color, 60%);
+                        color: lighten($main-color, 20%)
+                    }
+                }
+            }
+        }
+    }
+}

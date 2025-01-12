@@ -1,0 +1,63 @@
+$main-color: #0a0e14;
+
+.main_wrapper{
+    .forms{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 50px;
+    }
+    .form_wrapper{
+        display: flex;
+        gap: 20px;
+        padding-left: 20px;
+        .form_item{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            label{
+                color: white;
+                font-family: 'Arial';
+            }
+            input{
+                padding: 10px;
+                background-color: lighten($main-color, 20%);
+                border: 1px solid lighten($main-color, 20%);
+                outline: none;
+                transition: 0.3s all;
+                color: white;
+                font-size: 18px;
+                font-family: 'Arial';
+                &:focus{
+                    border-color: white;
+                }
+            }
+        }
+        input[type="submit"] {
+            background-color: lighten($main-color, 10%);
+            border: 2px solid lighten($main-color, 10%);
+            align-self: flex-end;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: 'Arial';
+            color: white;
+            transition: 0.5s all;
+            &:hover{
+                border-color: lighten($main-color, 25%);
+            }
+        }
+    }
+    .exit_account_btn{
+        align-self: flex-start;
+        margin-left: 20px;
+        padding: 6px 20px;
+        font-size: 17px;
+        background-color: lighten($main-color, 5%);
+        border: none;
+        color: white;
+        transition: 0.5s all;
+        &:hover{
+            background-color: lighten($main-color, 15%);
+        }
+    }
+}

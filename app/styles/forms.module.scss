@@ -1,0 +1,98 @@
+$main-color: #0a0e14;
+
+.forms_main{
+    .all_forms_wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: auto;
+        margin-top: 300px;
+        padding: 20px;
+        align-items: center;
+        font-family: 'Montserrat';
+        gap: 30px;
+        color: white;
+        .tools{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            .tools_item{
+                background-color: transparent;
+                border: none;
+                text-decoration: none;
+                color: white;
+                font-size: 17px;
+                font-family: 'Montserrat';
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .form_wrapper{
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            .form_item{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                label{
+                    font-size: 18px;
+                }
+                input{
+                    background-color: lighten($main-color, 20%);
+                    border: 3px solid lighten($main-color, 20%);
+                    font-size: 22px;
+                    padding: 10px;
+                    transition: 0.5s all;
+                    outline: none;
+                    border-radius: 10px;
+                    color: white;
+                    &:hover{
+                        border-color: lighten($main-color, 40%);
+                        border-radius: 25px;
+                    }
+                    &:focus{
+                        border-color: lighten($main-color, 40%);
+                        border-radius: 25px;
+                    }
+                }
+            }
+            input[type="submit"]{
+                align-self: center;
+                background-color: lighten($main-color, 20%);
+                padding: 10px 25px;
+                font-size: 20px;
+                border: none;
+                color: lighten($main-color, 60%);
+                border-radius: 10px;
+                transition: 0.5s all;
+                border: 2px solid lighten($main-color, 20%);
+                &:hover{
+                    border-color: lighten($main-color, 40%);
+                }
+            }
+        }
+    }
+}
+
+.results_message_{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 800;
+    box-shadow: inset 5px -5px 0 0 rgba(255, 255, 255, 0.507);
+    &success{
+        background-color: green !important;
+        color: white !important;
+    }
+    &false{
+        background-color: red !important;
+        color: white !important;
+    }
+}

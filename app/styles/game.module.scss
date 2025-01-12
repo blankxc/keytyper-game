@@ -1,0 +1,75 @@
+$main-color: #0a0e14;
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+    .start_btn{
+        color: lighten($main-color, 50%);
+        padding: 15px 50px;
+        outline: none;
+        font-size: 25px;
+        border: 3px solid lighten($main-color, 20%);
+        border-radius: 20px;
+        background-color: $main-color;
+        transition: 0.5s all;
+        &:hover{
+            background-color: lighten($main-color, 10%);
+            border-color: lighten($main-color, 40%);
+            box-shadow: 0 0 10px 0 lighten($main-color, 40%);
+        }
+    }
+}
+
+
+.words_area{
+    max-height: 6em;
+    overflow: hidden;
+    outline: none;
+    text-align: center;
+    span{
+        font-size: 40px;
+        font-family: 'electrolize';
+        color: white;
+    }
+    // .strings{
+    //     span{
+    //         display: inline-block;
+    //     }
+    // }
+}
+
+.entered_letter{
+    transition: 0.5s all;
+    color: gray !important
+}
+
+.game_controls{
+    .display_timer{
+        font-family: 'electrolize';
+        color: white;
+        font-size: 60px;
+        text-align: center;
+    }
+}
+
+.wps_cont{
+    color: white;
+    display: flex;
+    font-family: 'montserrat';
+    gap: 10px;
+    padding: 20px;
+    background-color: lighten($main-color, 10%);
+    flex-direction: column;
+    align-items: center;
+    p{
+        background-color: lighten($main-color, 10%);
+    }
+    .wps_title{
+        font-size: 30px;
+    }
+    .wps_value{
+        font-size: 25px;
+    }
+}
