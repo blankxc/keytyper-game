@@ -66,7 +66,7 @@ export default function Registration({resultsHandler}: registration) {
         .select();
         if (error) return 'Ошибка базы данных'
         if (data && data.length > 0) {
-            insertIntoEnRecords(data[0].id, data[0].username)
+            insertIntoEnRecords({token: data[0].id, username: data[0].username})
             return 'Регистрация прошла успешно'
         }
 

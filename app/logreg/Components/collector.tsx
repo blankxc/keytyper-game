@@ -4,8 +4,7 @@ import Registration from "./registration/registration";
 // import { supabase } from "@/app/api/supabase";
 import styles from '@/app/styles/forms.module.scss'
 import Link from "next/link";
-import { useEffect, useState } from 'react';
-import { useRouter } from "next/router";
+import { useState } from 'react';
 // import ResultsHandler from "./ResultsHandler/ResultHandler";
 
 export default function Collector() {
