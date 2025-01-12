@@ -3,13 +3,14 @@ import crypto from 'crypto';
 const ENCRYPTION_KEY = process.env.NEXT_PUBLIC_ENCRYPTION_KEY || '';
 
 export async function GET(req: NextRequest) {
-    // const cookies = req.headers.get('cookie') || '';
-    // const sessionToken = cookies
-    // .split(':')
-    // .find((cookie: string) => cookie.trim().startsWith('sessionToken'))
-    // ?.split('=')[1]
+    const cookies = req.headers.get('cookie') || '';
+    const sessionToken = cookies
+    .split(':')
+    .find((cookie: string) => cookie.trim().startsWith('sessionToken='))
+    ?.split('=')[1]
 
-    const sessionToken = req.cookies.get("sessionToken")?.value
+    // const sessionToken = req.cookies.get("sessionToken")?.value
+    // console.log("Headers Cookie:", req.headers.get('cookie'));
 
 
     if (!sessionToken) {
