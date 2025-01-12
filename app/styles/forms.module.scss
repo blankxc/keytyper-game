@@ -41,8 +41,8 @@
                     font-size: 18px;
                 }
                 input{
-                    background-color: color.adjust($main-color, $lightness: 20%);
-                    border: 3px solid color.adjust($main-color, $lightness: 20%);
+                    background-color: lighten($main-color,20%);
+                    border: 3px solid lighten($main-color,20%);
                     font-size: 22px;
                     padding: 10px;
                     transition: 0.5s all;
@@ -50,27 +50,27 @@
                     border-radius: 10px;
                     color: white;
                     &:hover{
-                        border-color: color.adjust($main-color, $lightness: 40%);
+                        border-color: lighten($main-color,40%);
                         border-radius: 25px;
                     }
                     &:focus{
-                        border-color: color.adjust($main-color, $lightness: 40%);
+                        border-color: lighten($main-color,40%);
                         border-radius: 25px;
                     }
                 }
             }
             input[type="submit"]{
                 align-self: center;
-                background-color: color.adjust($main-color, $lightness: 20%);
+                background-color: lighten($main-color,20%);
                 padding: 10px 25px;
                 font-size: 20px;
                 border: none;
-                color: color.adjust($main-color, $lightness: 60%);
+                color: lighten($main-color,60%);
                 border-radius: 10px;
                 transition: 0.5s all;
-                border: 2px solid color.adjust($main-color, $lightness: 20%);
+                border: 2px solid lighten($main-color,20%);
                 &:hover{
-                    border-color: color.adjust($main-color, $lightness: 40%);
+                    border-color: lighten($main-color,40%);
                 }
             }
         }

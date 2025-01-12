@@ -27,7 +27,7 @@ $main-color: #0a0e14;
             border-bottom: 1px solid white;
             transition: 0.5s all;
             &:hover {
-                background-color: color.adjust($main-color, $lightness: 15%);
+                background-color: lighten($main-color, 15%);
             }
         }
     }
