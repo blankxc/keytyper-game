@@ -5,12 +5,9 @@ const ENCRYPTION_KEY = process.env.NEXT_PUBLIC_ENCRYPTION_KEY || '';
 export async function GET(req: NextRequest) {
     const cookies = req.headers.get('cookie') || '';
     const sessionToken = cookies
-    .split(':')
+    .split(';')
     .find((cookie: string) => cookie.trim().startsWith('sessionToken='))
     ?.split('=')[1]
-
-    // const sessionToken = req.cookies.get("sessionToken")?.value
-    // console.log("Headers Cookie:", req.headers.get('cookie'));
 
 
     if (!sessionToken) {
