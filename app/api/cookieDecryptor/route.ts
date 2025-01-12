@@ -4,6 +4,7 @@ const ENCRYPTION_KEY = process.env.NEXT_PUBLIC_ENCRYPTION_KEY || '';
 
 export async function GET(req: NextRequest) {
     const cookies = req.headers.get('cookie') || '';
+    console.log('Cookies:', cookies)
     const sessionToken = cookies
     .split(';')
     .find((cookie: string) => cookie.trim().startsWith('sessionToken='))
