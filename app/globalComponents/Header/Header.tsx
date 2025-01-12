@@ -35,6 +35,8 @@ export default function Header() {
 
     useEffect(() => {
         getUsername();
+        console.log(userToken)
+        console.log(username)
     }, [userToken]);
 
     async function getUsername() {
@@ -47,6 +49,7 @@ export default function Header() {
             setUsername(data[0].username);
         }
     }
+
 
     return (
         <header className={styles.page_header}>
