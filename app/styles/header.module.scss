@@ -29,17 +29,17 @@ $main-color: #0a0e14;
                 .header_link{
                     display: block;
                     padding: 5px;
-                    background-color: lighten($main-color, 20%);
-                    color: lighten($main-color, 60%);
+                    background-color: color.adjust($main-color, $lightness: 20%);
+                    color: color.adjust($main-color, $lightness: 60%);
                     text-decoration: none;
                     border-radius: 20px;
                     font-family: 'Montserrat';
-                    box-shadow: 0 0 9px 4px lighten($main-color, 20%);
+                    box-shadow: 0 0 9px 4px color.adjust($main-color, $lightness: 20%);
                     transition: 0.5s all;
                     &:hover{
-                        background-color: lighten($main-color, 50%);
-                        box-shadow: 0 0 9px 4px lighten($main-color, 60%);
-                        color: lighten($main-color, 20%)
+                        background-color: color.adjust($main-color, $lightness: 50%);
+                        box-shadow: 0 0 9px 4px color.adjust($main-color, $lightness: 60%);
+                        color: color.adjust($main-color, $lightness: 20%)
                     }
                 }
             }
