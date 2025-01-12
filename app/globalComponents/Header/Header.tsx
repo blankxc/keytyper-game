@@ -74,7 +74,7 @@ export default function Header() {
                         </Link>
                     </li>
                 </ul>
-                {userToken !== "" ? (
+                {userToken.length > 0 ? (
                     <p className={styles.username}>
                         <Link
                             href={"/account"}
