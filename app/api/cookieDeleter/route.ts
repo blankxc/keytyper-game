@@ -1,10 +1,17 @@
 import { NextResponse } from 'next/server';
 
 export async function POST() {
-  return NextResponse.json({
-    status: 200,
-    headers: {
-      'Set-Cookie': 'sessionToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; Secure',
-    },
+  const response = NextResponse.json(
+    { message: 'Cookie cleared' },
+    { status: 200 }
+  );
+
+  response.cookies.set('sessionToken', '', {
+    path: '/',
+    expires: new Date(0), 
+    httpOnly: true,
+    secure: true,
   });
+
+  return response;
 }
