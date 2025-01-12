@@ -1,9 +1,9 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import crypto from 'crypto';
 const ENCRYPTION_KEY = process.env.NEXT_PUBLIC_ENCRYPTION_KEY || '';
 
-export async function GET(res: NextResponse) {
-    const cookies = res.headers.get('cookie') || '';
+export async function GET(req: NextRequest) {
+    const cookies = req.headers.get('cookie') || '';
     const sessionToken = cookies
     .split(':')
     .find((cookie: string) => cookie.trim().startsWith('sessionToken'))

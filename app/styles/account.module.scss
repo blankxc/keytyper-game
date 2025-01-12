@@ -1,4 +1,5 @@
 $main-color: #0a0e14;
+@use "sass:color";
 
 .main_wrapper{
     .forms{
@@ -21,8 +22,8 @@ $main-color: #0a0e14;
             }
             input{
                 padding: 10px;
-                background-color: lighten($main-color, 20%);
-                border: 1px solid lighten($main-color, 20%);;
+                background-color: color.scale($main-color, $lightness: 20%);
+                border: 1px solid color.scale($main-color, $lightness: 20%);;
                 outline: none;
                 transition: 0.3s all;
                 color: white;
@@ -34,8 +35,8 @@ $main-color: #0a0e14;
             }
         }
         input[type="submit"] {
-            background-color: lighten($main-color, 10%);;
-            border: 2px solid lighten($main-color, 10%);
+            background-color: color.scale($main-color, $lightness: 10%);;
+            border: 2px solid color.scale($main-color, $lightness: 10%);
             align-self: flex-end;
             padding: 10px 20px;
             font-size: 18px;
@@ -43,7 +44,7 @@ $main-color: #0a0e14;
             color: white;
             transition: 0.5s all;
             &:hover{
-                border-color: lighten($main-color, 25%);;
+                border-color: color.scale($main-color, $lightness: 25%);;
             }
         }
     }
@@ -52,12 +53,12 @@ $main-color: #0a0e14;
         margin-left: 20px;
         padding: 6px 20px;
         font-size: 17px;
-        background-color: lighten($main-color, 5%);;
+        background-color: color.scale($main-color, $lightness: 5%);;
         border: none;
         color: white;
         transition: 0.5s all;
         &:hover{
-            background-color: lighten($main-color, 15%);;
+            background-color: color.scale($main-color, $lightness: 15%);;
         }
     }
 }

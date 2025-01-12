@@ -1,4 +1,5 @@
 $main-color: #0a0e14;
+@use "sass:color";
 
 .main{
     display: flex;
@@ -6,18 +7,18 @@ $main-color: #0a0e14;
     align-items: center;
     margin-top: 300px;
     .start_btn{
-        color: lighten($main-color,50%);
+        color: color.scale($main-color, $lightness: 50%);
         padding: 15px 50px;
         outline: none;
         font-size: 25px;
-        border: 3px solid lighten($main-color,20%);
+        border: 3px solid color.scale($main-color, $lightness: 20%);
         border-radius: 20px;
         background-color: $main-color;
         transition: 0.5s all;
         &:hover{
-            background-color: lighten($main-color,10%);
-            border-color: lighten($main-color,40%);
-            box-shadow: 0 0 10px 0 lighten($main-color,40%);
+            background-color: color.scale($main-color, $lightness: 10%);
+            border-color: color.scale($main-color, $lightness: 40%);
+            box-shadow: 0 0 10px 0 color.scale($main-color, $lightness: 40%);
         }
     }
 }
@@ -60,11 +61,11 @@ $main-color: #0a0e14;
     font-family: 'montserrat';
     gap: 10px;
     padding: 20px;
-    background-color: lighten($main-color,10%);
+    background-color: color.scale($main-color, $lightness: 10%);
     flex-direction: column;
     align-items: center;
     p{
-        background-color: lighten($main-color,10%);
+        background-color: color.scale($main-color, $lightness: 10%);
     }
     .wps_title{
         font-size: 30px;
