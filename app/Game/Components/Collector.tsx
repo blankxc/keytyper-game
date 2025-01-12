@@ -324,7 +324,7 @@ export default function Collector() {
     async function insertIntoUsers() {
         const {data, error} = await supabase
         .from('users')
-        .update({'wpm_record': Math.floor(wpmValue / 2)})
+        .update({'wpm_record': wpmValue})
         .eq('id', userToken);
         if (error) return
         if (!data) return
@@ -333,7 +333,7 @@ export default function Collector() {
     async function insertIntoEnRecords() {
         const {data, error} = await supabase
         .from('en_wpm_records')
-        .update({'record': Math.floor(wpmValue / 2)})
+        .update({'record': wpmValue})
         .eq('id', userToken);
         if (error) return
         if (!data) return

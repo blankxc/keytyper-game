@@ -14,7 +14,7 @@ export default function GameInfo({displayTimer, wpmValue, isNeedWpm}: gameInfo) 
             <div className={styles.wps_cont}>
                 <p className={styles.wps_title}>WPM</p>
                 <p className={styles.wps_hint}>words per minute</p>
-                <p className={styles.wps_value}>{Math.floor(wpmValue / 2)}</p>
+                <p className={styles.wps_value}>{wpmValue}</p>
             </div>
             : ''}
         </section>
