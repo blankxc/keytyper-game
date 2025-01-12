@@ -48,10 +48,6 @@ export default function Header() {
         }
     }
 
-    useEffect(() => {
-        console.log(username);
-    }, [username]);
-
     return (
         <header className={styles.page_header}>
             <div className={styles.page_header_wrapper}>
@@ -74,7 +70,7 @@ export default function Header() {
                         </Link>
                     </li>
                 </ul>
-                {userToken.length > 0 ? (
+                {username.length > 0 ? (
                     <p className={styles.username}>
                         <Link
                             href={"/account"}

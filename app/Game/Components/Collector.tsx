@@ -348,9 +348,7 @@ export default function Collector() {
     function inputHandler(currentKey: string) {
         if (isGameActive) {
             setCurrentLetter(words[0][0][0]);
-            console.log(currentKey);
             if (currentKey == currentLetter) {
-                console.log(true);
                 setGuessedWords((prev) => [...prev, currentLetter]);
                 setWords((prevWords) => {
                     const newWords = prevWords.map((subArray) => [...subArray]);
