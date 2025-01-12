@@ -41,8 +41,8 @@
                     font-size: 18px;
                 }
                 input{
-                    background-color: lighten;
-                    border: 3px solid lighten;
+                    background-color: color.adjust($main-color, $lightness: 20%);
+                    border: 3px solid color.adjust($main-color, $lightness: 20%);
                     font-size: 22px;
                     padding: 10px;
                     transition: 0.5s all;
